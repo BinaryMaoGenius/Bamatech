@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bamatech - Tableau de Bord Administrateur</title>
+  <link rel="stylesheet" href="dashbord.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="sidebar">
+    <a href="#dashboard"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
+    <a href="#actualites"><i class="fas fa-newspaper"></i> Actualités</a>
+    <a href="#acteurs"><i class="fas fa-users"></i> Acteurs</a>
+    <a href="#formations"><i class="fas fa-graduation-cap"></i> Formations</a>
+    <a href="#ressources"><i class="fas fa-book"></i> Ressources</a>
+    <a href="#messages"><i class="fas fa-envelope"></i> Messages</a>
+    <a href="#utilisateurs"><i class="fas fa-user-cog"></i> Utilisateurs</a>
+    <a href="#parametres"><i class="fas fa-cogs"></i> Paramètres</a>
+  </div>
+
+  <div class="main">
+    <header>
+      <h1>Bamatech - Tableau de Bord Administrateur</h1>
+      <p>Gestion du site web Bamatech</p>
+    </header>
+
+    <section id="dashboard">
+      <h2>Statistiques Clés</h2>
+      <div class="stats">
+        <div class="stat">
+          <h3>Visiteurs Totaux</h3>
+          <p>1,234</p>
+        </div>
+        <div class="stat">
+          <h3>Nouvelles Actualités</h3>
+          <p>5</p>
+        </div>
+        <div class="stat">
+          <h3>Messages Non Lus</h3>
+          <p>3</p>
+        </div>
+        <div class="stat">
+          <h3>Nouveaux Acteurs</h3>
+          <p>2</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="actualites">
+      <h2>Actualités</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Date</th>
+            <th>Statut</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Partenariat avec Orange Mali</td>
+            <td>01/09/2025</td>
+            <td>Publié</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-pencil-alt"></i> Modifier</button>
+              <button class="delete-btn"><i class="fas fa-trash"></i> Supprimer</button>
+            </td>
+          </tr>
+          <!-- Autres lignes d'actualités -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="acteurs">
+      <h2>Acteurs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Rôle</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>TechMali Solutions</td>
+            <td>Partenaire</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-pencil-alt"></i> Modifier</button>
+              <button class="delete-btn"><i class="fas fa-trash"></i> Supprimer</button>
+            </td>
+          </tr>
+          <!-- Autres lignes d'acteurs -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="formations">
+      <h2>Formations</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Formation</th>
+            <th>Date</th>
+            <th>Prix</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Développement Web</td>
+            <td>05/07/2025</td>
+            <td>150,000 FCFA</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-pencil-alt"></i> Modifier</button>
+              <button class="delete-btn"><i class="fas fa-trash"></i> Supprimer</button>
+            </td>
+          </tr>
+          <!-- Autres lignes de formations -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="ressources">
+      <h2>Ressources</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Type</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Guide PDF sur le numérique</td>
+            <td>PDF</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-pencil-alt"></i> Modifier</button>
+              <button class="delete-btn"><i class="fas fa-trash"></i> Supprimer</button>
+            </td>
+          </tr>
+          <!-- Autres lignes de ressources -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="messages">
+      <h2>Messages</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Email</th>
+            <th>Objet</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Aminata Keita</td>
+            <td>aminata@example.com</td>
+            <td>Demande de formation</td>
+            <td>
+              <button class="read-btn"><i class="fas fa-eye"></i> Lire</button>
+              <button class="delete-btn"><i class="fas fa-trash"></i> Supprimer</button>
+            </td>
+          </tr>
+          <!-- Autres lignes de messages -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="utilisateurs">
+      <h2>Utilisateurs</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Rôle</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>admin@bamatech.ml</td>
+            <td>Super Admin</td>
+            <td>
+              <button class="edit-btn"><i class="fas fa-pencil-alt"></i> Modifier</button>
+              <button class="delete-btn"><i class="fas fa-trash"></i> Supprimer</button>
+            </td>
+          </tr>
+          <!-- Autres lignes d'utilisateurs -->
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Bamatech - Tous droits réservés</p>
+    </footer>
+  </div>
+
+  <script src="dashbord.js"></script>
+</body>
+</html>

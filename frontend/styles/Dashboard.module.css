@@ -1,0 +1,131 @@
+.dashboardPage {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+}
+
+.sidebar {
+  width: 250px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.sidebarLink {
+  color: var(--white);
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: var(--border-radius);
+  transition: background 0.3s ease;
+}
+
+.sidebarLink:hover,
+.sidebarLink:focus {
+  background-color: var(--secondary-color);
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+.tableContainer {
+  overflow-x: auto;
+  background: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.table th {
+  background-color: var(--primary-color);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.actionButton:hover {
+  color: var(--secondary-color);
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+  .dashboardPage {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .sidebarLink {
+    flex: 1 1 150px;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+}

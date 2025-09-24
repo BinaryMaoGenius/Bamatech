@@ -1,20 +1,83 @@
 # Bamatech
-🌍 Bamatech
 
-La plateforme qui connecte le Mali au futur numérique
+Plateforme numérique malienne qui connecte les acteurs, les ressources et les services TIC. Le projet a été migré vers une architecture moderne **Next.js + Express.js** pour offrir un rendu dynamique et une base extensible pour de futures intégrations (authentification, base de données, analytics, etc.).
 
-Bamatech est une plateforme numérique complète conçue pour centraliser et dynamiser l'écosystème technologique malien. Notre mission est de connecter les acteurs, de partager les ressources et de faciliter l'accès aux services et formations dans le secteur des Technologies de l'Information et de la Communication (TIC) au Mali.
+## Architecture
 
-🌟 Fonctionnalités principales
+```
+.
+├── backend/      # API Express (données simulées)
+├── frontend/     # Application Next.js (SSR + interactions client)
+├── CSS/, JS/, pages/  # Anciennes sources statiques conservées à titre de référence
+└── README.md
+```
 
-    Annuaire des acteurs : Une base de données complète des entreprises, startups, institutions publiques et professionnels du numérique au Mali.
+### Backend (Express.js)
+- Endpoints RESTful exposant les actualités, acteurs, ressources, formations, services et statistiques.
+- Routes administrateur dédiées pour les métriques, messages entrants et utilisateurs.
+- Middleware `cors`, `express.json` et `morgan` pour un développement confortable.
 
-    Actualités et événements : Un flux en temps réel des dernières nouvelles, conférences et ateliers liés aux TIC au Mali.
+### Frontend (Next.js)
+- Pages React (`/` et `/dashboard`) rendues côté serveur avec `getServerSideProps`.
+- Récupération des données via l'API Express avec repli local en cas d'API indisponible.
+- Interface riche : carrousel dynamique, mode sombre, barre de progression, recherche filtrant les acteurs, sections administrateur interactives.
+- Styles modernisés et responsives conservant l'identité visuelle initiale.
 
-    Ressources éducatives : Une bibliothèque de guides, de tutoriels vidéo et d'études de cas pour développer les compétences numériques.
+## Prérequis
+- Node.js 18+
+- npm 9+
 
-    Offres de formations : Un catalogue des formations certifiantes disponibles, avec des informations détaillées sur les prix, les dates et les lieux.
+## Installation
 
-    Services TIC : Une liste de services professionnels proposés par les acteurs de l'écosystème, tels que le développement web, le cloud et la cybersécurité.
+```bash
+# Installer les dépendances backend
+cd backend
+npm install
 
-    Interface utilisateur moderne : Un design épuré, avec des fonctionnalités telles qu'un mode sombre, un chat d'assistance et un menu de navigation intuitif.
+# Installer les dépendances frontend
+cd ../frontend
+npm install
+```
+
+## Lancer l'environnement de développement
+
+Dans deux terminaux distincts :
+
+```bash
+# Terminal 1 - API Express
+cd backend
+npm run dev   # démarre sur http://localhost:4000
+
+# Terminal 2 - Frontend Next.js
+cd frontend
+npm run dev   # démarre sur http://localhost:3000
+```
+
+Le frontend consomme l'API via la variable `NEXT_PUBLIC_API_BASE_URL` (défaut `http://localhost:4000/api`). Vous pouvez la personnaliser dans un fichier `.env.local` à la racine de `frontend/`.
+
+## Endpoints API principaux
+
+| Méthode | Route                        | Description                                      |
+|---------|------------------------------|--------------------------------------------------|
+| GET     | `/api/health`                | Vérification de statut                           |
+| GET     | `/api/news`                  | Liste des actualités                             |
+| GET     | `/api/actors`                | Annuaire des acteurs                             |
+| GET     | `/api/resources`             | Ressources stratégiques                          |
+| GET     | `/api/trainings`             | Sessions de formation                            |
+| GET     | `/api/services`              | Services d'accompagnement                        |
+| GET     | `/api/kpi`                   | Indicateurs clés de performance                  |
+| GET     | `/api/dashboard/metrics`     | Statistiques pour le tableau de bord admin       |
+| GET     | `/api/dashboard/messages`    | Messages entrants                                |
+| GET     | `/api/dashboard/users`       | Liste des utilisateurs administrateurs           |
+
+## Tests & qualité
+
+Aucun outil de tests automatisés n'est encore fourni. Ajoutez vos suites Jest/Playwright ou vos workflows CI selon vos besoins.
+
+## Prochaines étapes suggérées
+- Brancher une base de données (PostgreSQL, Supabase, MongoDB…)
+- Ajouter l'authentification et la gestion des rôles sur le tableau de bord
+- Déployer l'API (Railway, Render, Fly.io…) et le frontend (Vercel, Netlify)
+- Mettre en place un design system partagé et des tests end-to-end
+
+Bon développement avec Bamatech !

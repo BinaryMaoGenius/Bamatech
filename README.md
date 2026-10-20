@@ -1,4 +1,10 @@
-# Bamatech
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+    <img src="assets/banner-light.svg" alt="Bamatech" width="100%">
+  </picture>
+</div>
+
 
 Plateforme numérique malienne qui connecte les acteurs, les ressources et les services TIC. Le projet a été migré vers une architecture moderne **Next.js + Express.js** pour offrir un rendu dynamique et une base extensible pour de futures intégrations (authentification, base de données, analytics, etc.).
 

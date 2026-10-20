@@ -87,3 +87,7 @@ Aucun outil de tests automatisés n'est encore fourni. Ajoutez vos suites Jest/P
 - Mettre en place un design system partagé et des tests end-to-end
 
 Bon développement avec Bamatech !
+
+## Licence
+
+Code sous [licence MIT](./LICENSE) · © 2026 Emmanuel Elisé Koné.
